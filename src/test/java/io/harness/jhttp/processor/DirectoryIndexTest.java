@@ -56,6 +56,14 @@ public class DirectoryIndexTest {
         assertTrue(new DirectoryIndex().process(request, response));
         assertEquals("test123", getResponseAsString());
     }
+    
+     @Test
+    public void testIndexHtm22() throws IOException {
+        Files.write(tempDir.resolve("index.htm"), "test123".getBytes());
+        System.out.println(״בדיקה״);
+        assertTrue(new DirectoryIndex().process(request, response));
+        assertEquals("בדיקה", getResponseAsString());
+    }
 
     @Test
     public void testNoIndex() throws IOException {
