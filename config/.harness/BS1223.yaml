@@ -11,13 +11,12 @@ connector:
     authentication:
       type: Http
       spec:
-        type: UsernamePassword
+        type: OAuth
         spec:
-          username: nofarb
-          passwordRef: account.nofar_github_token
+          tokenRef: harnessoauthaccesstoken_github_1702240591722
     apiAccess:
-      type: Token
+      type: OAuth
       spec:
-        tokenRef: account.nofar_github_token
+        tokenRef: harnessoauthaccesstoken_github_1702240591722
     executeOnDelegate: false
     type: Account
