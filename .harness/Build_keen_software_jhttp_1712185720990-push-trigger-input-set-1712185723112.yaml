@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_keen_software_jhttp_1712185720990-push-trigger-input-set
+  identifier: Build_keen_software_jhttp_1712185720990pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: playground
+  pipeline:
+    identifier: Build_keen_software_jhttp_1712185720990
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
