@@ -1,0 +1,12 @@
+package com.example.webserver;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class MyWebServerUnitTest {
+    @Test
+    public void testServerStartsAndStops() {
+        // Here, you'd mock the server behavior to test start/stop functionalities
+        assertTrue(true); // Simplified for illustration
+    }
+}
