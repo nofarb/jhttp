@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_nofarb_jhttp_1717040413639-push-trigger-input-set
+  identifier: Build_nofarb_jhttp_1717040413639pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_nofarb_jhttp_1717040413639
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
