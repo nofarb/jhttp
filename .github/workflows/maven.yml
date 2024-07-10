@@ -35,6 +35,7 @@ jobs:
 
     - name: Build with Maven
       run: |
+        export DD_CIVISIBILITY_ENABLED=true
         export DD_CIVISIBILITY_AGENTLESS_ENABLED=true
         export DD_AGENTLESS_LOG_SUBMISSION_ENABLED=true
         export DD_API_KEY=${{ secrets.DD_API_KEY }}
@@ -43,6 +44,7 @@ jobs:
         export DD_SERVICE=my-java-app
         export MAVEN_OPTS=-javaagent:$HOME/.datadog/dd-java-agent.jar 
         mvn clean verify
+
 
 
 
