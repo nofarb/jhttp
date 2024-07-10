@@ -29,7 +29,9 @@ jobs:
 
     
     - name: Download Datadog Java Tracer
-      run: wget -O $HOME/.datadog/dd-java-agent.jar https://dtdg.co/latest-java-tracer
+      run: |
+          mkdir -p $HOME/.datadog
+          wget -O $HOME/.datadog/dd-java-agent.jar https://dtdg.co/latest-java-tracer
 
     - name: Build with Maven
       run: |
