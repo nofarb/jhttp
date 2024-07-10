@@ -61,7 +61,13 @@ public class ResourceNotFoundTest {
     
     @Test
     public void testRootListing2() throws IOException {
-        Thread.sleep(2000);
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+        // Handle the exception (e.g., log it or rethrow as a RuntimeException)
+        e.printStackTrace();
+        Thread.currentThread().interrupt(); // Optional: Restore the interrupted status
+        } 
         assertTrue(new ResourceNotFound().process(request, response));
         verify(response).setStatus(404, "File not found");
         assertEquals(readResource("/not-found/not-found.html"), stringWriter.toString());
@@ -69,7 +75,14 @@ public class ResourceNotFoundTest {
     
     @Test
     public void testRootListing3() throws IOException {
-        Thread.sleep(3000);
+        
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+        // Handle the exception (e.g., log it or rethrow as a RuntimeException)
+        e.printStackTrace();
+        Thread.currentThread().interrupt(); // Optional: Restore the interrupted status
+        } 
         assertTrue(new ResourceNotFound().process(request, response));
         verify(response).setStatus(404, "File not found");
         assertEquals(readResource("/not-found/not-found.html"), stringWriter.toString());
@@ -77,7 +90,13 @@ public class ResourceNotFoundTest {
     
     @Test
     public void testRootListing4() throws IOException {
-        Thread.sleep(4000);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+        // Handle the exception (e.g., log it or rethrow as a RuntimeException)
+        e.printStackTrace();
+        Thread.currentThread().interrupt(); // Optional: Restore the interrupted status
+        } 
         assertTrue(new ResourceNotFound().process(request, response));
         verify(response).setStatus(404, "File not found");
         assertEquals(readResource("/not-found/not-found.html"), stringWriter.toString());
@@ -85,14 +104,26 @@ public class ResourceNotFoundTest {
     
     @Test
     public void testRootListing5() throws IOException {
-        Thread.sleep(9000);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+        // Handle the exception (e.g., log it or rethrow as a RuntimeException)
+        e.printStackTrace();
+        Thread.currentThread().interrupt(); // Optional: Restore the interrupted status
+        } 
         assertTrue(new ResourceNotFound().process(request, response));
         verify(response).setStatus(404, "File not found");
         assertEquals(readResource("/not-found/not-found.html"), stringWriter.toString());
     }    
     @Test
     public void testRootListing6() throws IOException {
-        Thread.sleep(7000);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+        // Handle the exception (e.g., log it or rethrow as a RuntimeException)
+        e.printStackTrace();
+        Thread.currentThread().interrupt(); // Optional: Restore the interrupted status
+        } 
         assertTrue(new ResourceNotFound().process(request, response));
         verify(response).setStatus(404, "File not found");
         assertEquals(readResource("/not-found/not-found.html"), stringWriter.toString());
