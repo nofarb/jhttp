@@ -26,7 +26,7 @@ jobs:
       with:
         java-version: '8'
         distribution: 'temurin'
-
+ 
     
     - name: Download Datadog Java Tracer
       run: |
